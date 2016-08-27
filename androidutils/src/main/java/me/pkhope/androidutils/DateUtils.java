@@ -1,5 +1,6 @@
 package me.pkhope.androidutils;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -18,6 +19,10 @@ public class DateUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static DateFormat getDateFormat(String format){
+        return new SimpleDateFormat(format);
     }
 
     public static Date parseDate(String strDate, String format) {
